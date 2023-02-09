@@ -10,6 +10,7 @@
 # - --start
 # - --stop
 # - --restart
+# - --status
 # - --setup-dev-env
 # - --setup-apache2
 # - --setup-php
@@ -116,6 +117,7 @@ help_info() {
     printf "  --start\t   Start the LAMP Server (apache2 & mysql)\n"
     printf "  --stop\t   Stop the LAMP Server (apache2 & mysql)\n"
     printf "  --restart\t   Restart the LAMP Server (apache2 & mysql)\n"
+    printf "  --status\t   Show the status of the LAMP Server (apache2 & mysql)\n"
     printf "  --setup-dev-env  Install the full dev environment, including the setup of php, apache2 & mysql, as well as phpMyAdmin, Composer & openSSH-server and the basic configuration of git\n"
     printf "  --setup-apache2  Install and perform basic configuration of just Apache2\n"
     printf "  --setup-php\t   Install and perform basic configuration of just PHP\n"
@@ -146,6 +148,12 @@ case $1 in
         echo "Restarting Apache2 & MySQL"
         sudo service apache2 restart
         sudo service mysql restart
+    ;;
+
+    --status)
+        echo "Status of Apache2 & MySQL"
+        sudo service apache2 status
+        sudo service mysql status
     ;;
 
     --setup-dev-env)
