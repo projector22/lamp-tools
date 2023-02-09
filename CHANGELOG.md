@@ -1,5 +1,17 @@
 # Lamp Tools
 
+## v0.1.2
+
+### Added
+
+- Added an argument `--status` to see the status of lamp services.
+
+### Issues Closed
+
+- [#3](https://github.com/projector22/lamp-tools/issues/3)
+
+---
+
 ## v0.1.1
 
 ### Added
